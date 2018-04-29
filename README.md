@@ -125,3 +125,6 @@ for i in range(len(names)):
 write_names_and_phones_to_csv(names,phones)
 ```
 
+![Image of CSV Output](https://raw.githubusercontent.com/zowail/dasschnelle-scraper/master/csv%20results.PNG?token=AMfGvvg0TvqbQMrmcymnm_3ijAMt57sXks5a7k9awA%3D%3D)
+
+![Image of VS Code Output](https://raw.githubusercontent.com/zowail/dasschnelle-scraper/master/vs%20code%20output.PNG?token=AMfGvr7BmAkYB8yQY0-zIvG_GqjAvkpRks5a7k9jwA%3D%3D)
