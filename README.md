@@ -8,6 +8,8 @@
 
 The following code is written in **python 3.6.5** and **Selenium** which is a module for scraping and automating.
 
+![Image of search results page](https://raw.githubusercontent.com/zowail/dasschnelle-scraper/master/dasschnelle%20search%20results%20page.PNG?token=AMfGvjJgWfWdTtmG3_NMxZGAiwpcpw3Sks5a7k7gwA%3D%3D)
+
 **Basically the full script is reading input search queries from csv file and then visits the website then start searching for all names and clicks search and finally scrapes all names and phones under some conditions**
 
 **But in this page i will present only the part of scraping one search result page and not all of the website**
