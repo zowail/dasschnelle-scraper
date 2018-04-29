@@ -4,7 +4,7 @@
 
 ### In this page i will talk about some parts of the code including a sample from the source code.
 
-**Starting from this url*** : https://www.dasschnelle.at/ergebnisse?what=john&where=&distance=0&search_button=SUCHEN
+**Starting from this url** : https://www.dasschnelle.at/ergebnisse?what=john&where=&distance=0&search_button=SUCHEN
 
 The following code is written in **python 3.6.5** and **Selenium** which is a module for scraping and automating.
 
