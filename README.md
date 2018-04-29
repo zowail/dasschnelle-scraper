@@ -16,7 +16,6 @@ The script will open google chrome using the chrome driver then visits a search 
 and then will extract any contact details "Names and Phone Numbers" but if the name string has more than 2 words then it will skip it and also if there is no phone number it will be skipped as well.
 
 **First import the needed modules**
-
 ```python
 from time import sleep
 from selenium.webdriver.common.keys import Keys
@@ -29,7 +28,6 @@ import re
 ```
 
 **Then create the function that extracts the name and phone from all contacts then append them to two lists which are the return variables**
-
 ```python
 def get_names_and_phones_from_search_results():
     
@@ -76,7 +74,6 @@ def get_names_and_phones_from_search_results():
 ```
 
 **Another function that takes 2 lists as arguments then write them to a csv file**
-
 ```python
 def write_names_and_phones_to_csv(names,phones):
     
@@ -105,40 +102,24 @@ def write_names_and_phones_to_csv(names,phones):
     resultFile.close()
 ```
 
-
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
+**Now let's communicate with Google Chrome using the chrome driver and go to the search results page**
 ```python
-print("hello")
+driver = webdriver.Chrome('C:\chromedriver\chromedriver.exe')
+
+
+driver.get("https://www.dasschnelle.at/ergebnisse?what=david&where=&distance=0&search_button=SUCHEN")
+
+sleep(0.5)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+**Finally lets parse the page then print the results and also write them to a csv file**
+```python
+names, phones = get_names_and_phones_from_search_results()
 
-### Jekyll Themes
+for i in range(len(names)):
+    print(names[i], " ", phones[i])
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/zowail/dasschnelle/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+# write names and phones to csv
+write_names_and_phones_to_csv(names,phones)
+```
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
